@@ -1,0 +1,35 @@
+<h1>Usuario</h1>
+
+    <p>
+    <h3><a href="/productos/create">Crear Producto</a></h3>
+        <div class="table table-hover">
+
+            <h1>Lista de Productos</h1>
+            {{#if productos }}
+               <table border="1">
+                   <thead>
+                       <tr>
+                           <th>Nombre</th>
+                           <th>Precio</th>
+                           <th>Stock</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       {{# each productos }}
+                       <tr>
+                           <td><a href="/productos/show/{{ _id }}"> {{ nombre }}</td>
+                           <td> {{ nombre }}</td>
+                           <td> {{ precio }}</td>
+                           <td> {{ stock }}</td>
+                       </tr>
+                       {{/each}}
+                   </tbody>
+
+               </table>
+
+            {{~^~}} <!-- Este es es eun else de la condición -->
+                <div>Lista vacia</div>
+            {{/if}}
+
+        </div>
+    </p>

@@ -1,0 +1,38 @@
+<h1>Usuario</h1>
+    <p>
+    <h3><a href="/empleados/create">Crear Empleado</a></h3>
+        <div class="table table-hover">
+
+            <h1>Lista de Empleados</h1>
+            {{#if empleados }}
+               <table border="1">
+                   <thead>
+                       <tr>
+                           <th>Nombre</th>
+                           <th>Email</th>
+                           <th>DNI</th>
+                           <th>sexo</th>
+                           <th>Telefono</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       {{# each empleados }}
+                       <tr>
+                           <td><a href="/empleados/show/{{ _id }}"> {{ nombre }}</td>
+                           <td> {{ nombre }}</td>
+                           <td> {{ email }}</td>
+                           <td> {{ dni }}</td>
+                           <td> {{sexo}}</td>
+                           <td> {{telefono}}</td>
+                       </tr>
+                       {{/each}}
+                   </tbody>
+
+               </table>
+
+            {{~^~}} <!-- Este es es eun else de la condición -->
+                <div>Lista vacia</div>
+            {{/if}}
+
+        </div>
+    </p>
